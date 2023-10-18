@@ -8,8 +8,8 @@ edition = "2021"
 [dependencies]
 argh = "0.1"
 anyhow = "1"
-# ipynb_parse = { git = "https://github.com/ArvinSKushwaha/ipynb_parse" }
-ipynb_parse = { path = "../ipynb_parse" }
+ipynb_parse = { git = "https://github.com/ArvinSKushwaha/ipynb_parse" }
+# ipynb_parse = { path = "../ipynb_parse" }
 serde = "1"
 serde_json = "1"
 thiserror = "1"
