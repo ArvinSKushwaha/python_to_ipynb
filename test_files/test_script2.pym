@@ -1,0 +1,18 @@
+#%% code
+import numpy as np
+
+np.array
+
+
+#%% markdown
+# # This is a mean field theory
+# $$ \int x^2 dx = \frac{x^3}{3} + C $$
+#%%
+
+# arstoien
+
+
+#%% code
+import numpy as np
+
+#%%
