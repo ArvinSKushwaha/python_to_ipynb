@@ -1,0 +1,50 @@
+#%% markdown
+# This script demonstrates Monte-Carlo estimation of $\pi$. We randomly
+# sample uniformly distributed 2-D points in the range $[0, 1)^2$, and count how
+# many are within a circle of radius 1, equivalently, how many points have a
+# magnitude of length 1 or less.
+#%%
+
+# Personal notes, to not go in the final notebook.
+
+#%% markdown
+# We should start by importing all relevant libraries.
+
+#%% code
+
+# We do need numpy for our `ndarray` operations
+import numpy as np
+
+#%% markdown
+
+# To ensure our experiment is reproducible, let's set a seed of 0, using the
+# `np.random.seed(seed: int)` method.
+
+#%% code
+
+np.random.seed(0)
+
+#%% markdown
+# The probability of landing in the circle when uniformly sampling on $[0, 1)^2$
+# is given by:
+
+# $$ \frac{1}{4} \left. \pi r^2 \right|_{r = 1} = \frac{\pi}{4} $$
+
+# So the ratio of points in the circle to total points, (the empirical probability
+# of landing in the circle can be inverted for $\pi$.
+
+# $$ \pi \approx 4\frac{\#_{\text{in}}}{\#_{\text{total}}} $$
+
+#%% code
+
+N = 65536
+
+points = np.random.rand(N, 2)
+distance = np.linalg.norm(points, axis=1)
+
+points_in_circle = np.sum(distance <= 1.)
+
+pi_estimate = 4. * points_in_circle / N
+
+print(pi_estimate, np.pi)
+#%%

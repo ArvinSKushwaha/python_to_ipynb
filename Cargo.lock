@@ -42,7 +42,6 @@ dependencies = [
 [[package]]
 name = "ipynb_parse"
 version = "0.1.0"
-source = "git+https://github.com/ArvinSKushwaha/ipynb_parse#aac8ab92f9fc6a79116de9fb0f6a0826e0dbd57e"
 dependencies = [
  "serde",
  "serde_json",
@@ -65,17 +64,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "python_to_ipynb"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "argh",
- "ipynb_parse",
- "serde",
- "serde_json",
-]
-
-[[package]]
 name = "quote"
 version = "1.0.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -89,6 +77,18 @@ name = "ryu"
 version = "1.0.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1ad4cc8da4ef723ed60bced201181d83791ad433213d8c24efffda1eec85d741"
+
+[[package]]
+name = "script_to_ipynb"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "argh",
+ "ipynb_parse",
+ "serde",
+ "serde_json",
+ "thiserror",
+]
 
 [[package]]
 name = "serde"
